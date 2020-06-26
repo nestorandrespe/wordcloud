@@ -12,6 +12,7 @@ class Wordcloud extends Component {
         this.canvas = React.createRef();
 
         this.checkIsAvailable = this.checkIsAvailable.bind(this)
+        this.updateCanvas = this.updateCanvas.bind(this)
     }
 
     componentDidMount() {
@@ -62,6 +63,8 @@ class Wordcloud extends Component {
 
                     if(this.checkIsAvailable(ocupied, random_x, random_y, boundary[0] + 5, boundary[1] + 5)){
 
+                        this.state.ctx.fillStyle = this.props.color
+                        this.state.ctx.globalAlpha = (0.8/i) + 0.2
                         this.state.ctx.font = this.props.list[i][1] + "px Arial"
                         this.state.ctx.textAlign = "center";
                         this.state.ctx.textBaseline = "middle";
@@ -85,6 +88,7 @@ class Wordcloud extends Component {
                 var mx = this.props.width / 2
                 var mh = this.props.height / 2
 
+                this.state.ctx.fillStyle = this.props.color
                 this.state.ctx.font = this.props.list[i][1] + "px Arial"
                 this.state.ctx.textAlign = "center";
                 this.state.ctx.textBaseline = "middle";

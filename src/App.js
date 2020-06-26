@@ -9,6 +9,7 @@ function App() {
       <Wordcloud
         width="600"
         height="300"
+        color="hsl(189,56%,63%)"
         list={[
           ['cuatro', 70],
           ['cuatro', 50],
@@ -27,9 +28,10 @@ function App() {
 
       <Wordcloud
         width="600"
+        color="hsl(189,56%,63%)"
         height="300"
         list={[
-          ['cuatro', 70],
+          ['Esto es lo máximo', 40],
           ['cuatro', 50],
           ['uno',  40],
           ['tres', 20],
