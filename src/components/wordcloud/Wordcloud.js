@@ -73,7 +73,7 @@ class Wordcloud extends Component {
                         ocupied.push([random_x,random_y,boundary[0] + 5, boundary[1] + 5])
 
                         break
-                    } else if(tries == max_tries-1 && aroundSpace < cw / 2){
+                    } else if(tries == max_tries-1 && aroundSpace < cw){
                         aroundSpace += 50
                         tries = 0
 
